@@ -1,33 +1,18 @@
 package main
 
+// https://github.com/dwoja22/ffmpeg-webrtc
+
 import (
+	"fmt"
 	"github.com/pion/webrtc/v3"
 )
 
 
 func main() {
-	// Create a MediaEngine object to configure the supported codec
-	m := webrtc.MediaEngine{}
 
-	// Setup the codecs you want to use.
-	// We'll use a VP8 and Opus but you can also define your own
-	err := m.RegisterCodec(webrtc.RTPCodecParameters{
-		RTPCodecCapability: webrtc.RTPCodecCapability{
-			MimeType: "video/H264",
-			ClockRate: 90000,
-			Channels: 0,
-			SDPFmtpLine: "",
-			RTCPFeedback: nil,
-		},
-		PayloadType:        96,
-	}, webrtc.RTPCodecTypeVideo);
-	if err != nil {
-		panic(err)
-	}
+}
 
-	// Create the API object with the MediaEngine
-	api := webrtc.NewAPI(webrtc.WithMediaEngine(&m))
-
+func setupPeerConnection() *webrtc.PeerConnection {
 	config := webrtc.Configuration{
 		ICEServers: []webrtc.ICEServer{
 			{
@@ -39,8 +24,16 @@ func main() {
 	}
 
 	// Create a new RTCPeerConnection
-	peerConnection, err := api.NewPeerConnection(config)
+	peerConnection, err := webrtc.NewPeerConnection(config)
 	if err != nil {
 		panic(err)
 	}
+
+	// Set the handler for ICE connection state
+	// This will notify you when the peer has connected/disconnected
+	peerConnection.OnICEConnectionStateChange(func(connectionState webrtc.ICEConnectionState) {
+		fmt.Printf("Connection State has changed %s \n", connectionState.String())
+	})
+
+	return peerConnection
 }
