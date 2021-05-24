@@ -29,7 +29,7 @@ func (C *Capture) Start() error {
 	C.Height = 1080
 	C.Width = 1920
 
-	cmd := exec.Command("ffmpeg", "-framerate", "30", "-f", C.InputFormat, "-input_format", "h264", "-video_size", fmt.Sprintf("%vx%v", C.Width, C.Height), "-i", c.DevicePath, "-c", "copy", "-f", "h264", "pipe:1")
+	cmd := exec.Command("ffmpeg", "-framerate", "30", "-f", C.InputFormat, "-input_format", "h264", "-video_size", fmt.Sprintf("%vx%v", C.Width, C.Height), "-i", C.DevicePath, "-c", "copy", "-f", "h264", "pipe:1")
 	fmt.Println(cmd.Args)
 
 	dataPipe, err := cmd.StdoutPipe()
