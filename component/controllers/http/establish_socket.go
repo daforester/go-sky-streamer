@@ -30,9 +30,6 @@ func (C *EstablishSocketController) Run() error {
 }
 
 func (C *EstablishSocketController) EstablishSocket(c *gin.Context) error {
-	// fmt.Println(fmt.Sprintf("Client Engine: %p", C.wsClientEngine))
-	// fmt.Println(fmt.Sprintf("Client Collection: %p", C.wsClientEngine.GetCollection()))
-
 	w := c.Writer
 	r := c.Request
 

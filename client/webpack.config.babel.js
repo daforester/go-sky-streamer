@@ -10,11 +10,11 @@ import WebpackPwaManifest from 'webpack-pwa-manifest';
 
 import { InjectManifest } from 'workbox-webpack-plugin';
 
-const BASE_URL = 'https://orbitel.app';
+const BASE_URL = 'http://127.0.0.1:60850';
 const DEV = process.env.NODE_ENV !== 'production';
-const API_URL = 'https://orbitel.app/api';
-const PUBLIC_PATH = 'https://orbitel.app/';
-const WS_URL = 'wss://orbitel.app/ws';
+const API_URL = 'http://127.0.0.1:60850/api';
+const PUBLIC_PATH = 'http://127.0.0.1:60850/';
+const WS_URL = 'ws://127.0.0.1:60850/ws';
 
 toml.install();
 const TOML = require('../config.toml');

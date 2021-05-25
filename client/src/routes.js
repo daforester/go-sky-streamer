@@ -1,4 +1,4 @@
-const Main = () => import('client/src/views/Main.vue');
+const Main = () => import('views/Main.vue');
 
 export const routes = [
   { path: '*', component: Main },

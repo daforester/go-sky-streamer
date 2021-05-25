@@ -5,9 +5,8 @@ import VueRouter from 'vue-router';
 import { routes } from 'routes';
 import { config } from 'store';
 import WebApp from 'views/WebApp.vue';
-import Console from './libs/debug/console';
 
-export default function Orbitel(options = {}, componentConfig = {}) {
+export default function SkyStreamer(options = {}, componentConfig = {}) {
   Vue.use(Vuex);
   Vue.use(VueRouter);
   Vue.mixin({
