@@ -8,7 +8,7 @@ export default {
     };
   },
   created() {
-    this.websocket = new CommandSocket({ wsuri: this.wsuri });
+    this.websocket = new CommandSocket({ wsuri: this.wsUri });
     this.websocket.on('data', this.readWebSocket);
 
     this.socketRouter.addJSONHandler('ICE_DATA', (event) => {
