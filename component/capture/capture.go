@@ -3,8 +3,6 @@ package capture
 import (
 	"errors"
 	"fmt"
-	"github.com/daforester/go-sky-streamer/component/stream"
-	"github.com/pion/webrtc/v3/pkg/media"
 	"log"
 	"os"
 	"os/exec"
@@ -18,8 +16,8 @@ type Capture struct {
 	Height uint
 	InputFormat string
 	Width uint
-	on bool
-	off chan bool
+	On bool
+	Off chan bool
 }
 
 func (C Capture) New() *Capture {
@@ -29,7 +27,10 @@ func (C Capture) New() *Capture {
 }
 
 func (C *Capture) Start() error {
-	C.DevicePath = "@device_pnp_\\\\?\\usb#vid_04ca&pid_707f&mi_00#6&306659e8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global"
+	// Windows Device List
+	// ffmpeg -list_devices true -f dshow -i dummy
+	//C.DevicePath = "@device_pnp_\\\\?\\usb#vid_04ca&pid_707f&mi_00#6&306659e8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global"
+	C.DevicePath = "@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}"
 	C.InputFormat = "dshow"
 	// C.InputFormat = "v4l2"
 	C.Height = 1080
@@ -52,7 +53,7 @@ func (C *Capture) Start() error {
 	go func() {
 		for {
 			select {
-			case <-C.off:
+			case <-C.Off:
 				if err := cmd.Process.Signal(syscall.SIGTERM); err != nil {
 					log.Println("failed to kill camera process. ", err)
 				}
@@ -69,31 +70,10 @@ func (C *Capture) Start() error {
 		}
 	}()
 
-	C.off = make(chan bool)
+	C.Off = make(chan bool)
 
-	C.on = true
+	C.On = true
 	return nil
-}
-
-func (C *Capture) AttachTrack(stream *stream.Stream) {
-	go func() {
-		for {
-			select {
-			case <-C.off:
-				_ = stream.Connection.Close()
-				return
-			case f := <-C.Framebuffer:
-				sample := media.Sample{
-					Data:    f,
-				}
-
-				if err := stream.VideoTrack.WriteSample(sample); err != nil {
-					log.Fatal("could not write rtp sample. ", err)
-					return
-				}
-			}
-		}
-	}()
 }
 
 func execCmd(cmd *exec.Cmd) error {

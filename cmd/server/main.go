@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"github.com/daforester/go-di-container/di"
 	. "github.com/daforester/go-sky-streamer/component/bindings"
+	"github.com/daforester/go-sky-streamer/component/capture"
 	"github.com/daforester/go-sky-streamer/component/routers/http"
 	"github.com/daforester/go-sky-streamer/component/routers/websocket"
 	"github.com/daforester/go-sky-streamer/component/websockets/engines"
@@ -20,7 +21,6 @@ import (
 	"syscall"
 	"time"
 )
-
 
 func main() {
 	setup.Config()
@@ -59,6 +59,10 @@ func main() {
 
 	// Register Websocket request routes
 	websocket.NewClientRouter(app, wsClientEngine)
+
+	// Start Capture
+	capture := app.Make((*capture.Capture)(nil)).(*capture.Capture)
+	capture.Start()
 
 	// Run HTTP server
 	_ = r.Run(":" + viper.GetString("HTTP_PORT"))

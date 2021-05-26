@@ -16,6 +16,7 @@ export default {
     };
   },
   mounted() {
+    this.setupRTC();
     this.on('ICE_DATA', (event) => {
       try {
         this.peer.setRemoteDescription(new RTCSessionDescription(JSON.parse(atob(event.Data))));
@@ -50,8 +51,25 @@ export default {
       pc.onicecandidate = (event) => {
         if (event.candidate === null) {
           console.log(JSON.stringify(pc.localDescription));
+          const statusUpdate = {
+            Command: 'GET_ICE',
+            Data: {
+              Offer: btoa(JSON.stringify(pc.localDescription)),
+            },
+          };
+
+          this.websocket.send(JSON.stringify(statusUpdate));
         }
       };
+
+      pc.addTransceiver('audio', { direction: 'sendrecv' });
+      pc.addTransceiver('video', { direction: 'sendrecv' });
+
+      pc.createOffer().then((localDescription) => {
+        pc.setLocalDescription(localDescription);
+      }).catch((err) => {
+        console.log(err);
+      });
     },
   },
 };

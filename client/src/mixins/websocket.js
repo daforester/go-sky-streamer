@@ -11,8 +11,8 @@ export default {
     this.websocket = new CommandSocket({ wsuri: this.wsuri });
     this.websocket.on('data', this.readWebSocket);
 
-    this.socketRouter.addJSONHandler('ICE_DATA', (e) => {
-      this.$emit('ICE_DATA', { Data: e.Data });
+    this.socketRouter.addJSONHandler('ICE_DATA', (event) => {
+      this.$emit('ICE_DATA', { Data: event.Data });
     });
   },
   destroyed() {
