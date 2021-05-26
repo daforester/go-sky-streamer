@@ -3,7 +3,7 @@
 </template>
 <script>
 
-import websocket from "../mixins/websocket";
+import websocket from '../mixins/websocket';
 
 export default {
   name: 'Main',
@@ -13,14 +13,14 @@ export default {
   data() {
     return {
       peer: null,
-    }
+    };
   },
   mounted() {
-    this.on('ICE_DATA', (e) => {
+    this.on('ICE_DATA', (event) => {
       try {
-        this.peer.setRemoteDescription(new RTCSessionDescription(JSON.parse(atob(e.Data))));
-      } catch (e) {
-        console.log(e);
+        this.peer.setRemoteDescription(new RTCSessionDescription(JSON.parse(atob(event.Data))));
+      } catch (err) {
+        console.log(err);
       }
     });
   },
@@ -30,30 +30,30 @@ export default {
         iceServers: [
           {
             urls: 'stun:stun.l.google.com:19302',
-          }
+          },
         ],
       });
       this.peer = pc;
 
-      pc.ontrack = (e) => {
-        const el = document.createElement(e.track.kind);
-        el.srcObject = e.streams[0];
+      pc.ontrack = (event) => {
+        const el = document.createElement(event.track.kind);
+        [el.srcObject] = event.streams;
         el.autoplay = true;
         el.controls = true;
         this.$refs.videoStream.appendChild(el);
-      }
+      };
 
-      pc.oniceconnectionstatechange = (e) => {
-        console.log(e);
-      }
+      pc.oniceconnectionstatechange = (event) => {
+        console.log(event);
+      };
 
-      pc.onicecandidate = (e) => {
-        if (e.candidate === null) {
+      pc.onicecandidate = (event) => {
+        if (event.candidate === null) {
           console.log(JSON.stringify(pc.localDescription));
         }
-      }
-    }
-  }
+      };
+    },
+  },
 };
 </script>
 <style>
