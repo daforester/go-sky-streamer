@@ -40,7 +40,6 @@ func (C *GetICEController) GetICE(c *engine.Context)  *actions.JSONResponse {
 		logrus.Debug("No offer")
 		return nil
 	}
-
 	s := C.App().Make((*stream.Stream)(nil)).(*stream.Stream)
 
 	localDescription := s.AddOffer(offer.(string))

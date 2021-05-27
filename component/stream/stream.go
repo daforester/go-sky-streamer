@@ -5,6 +5,7 @@ import (
 	"compress/gzip"
 	"encoding/base64"
 	"encoding/json"
+	"fmt"
 	"github.com/daforester/go-sky-streamer/component/capture"
 	"github.com/pion/webrtc/v3"
 	"github.com/pion/webrtc/v3/pkg/media"
@@ -31,7 +32,38 @@ func (S Stream) New(capture *capture.Capture) *Stream {
 		panic(err)
 	}
 
+	peerConnection.OnConnectionStateChange(func(state webrtc.PeerConnectionState) {
+		if state == webrtc.PeerConnectionStateConnected {
+			localTrack, err := webrtc.NewTrackLocalStaticSample(
+				webrtc.RTPCodecCapability{MimeType: "video/h264"},
+				"video",
+				"pion",
+			)
+			if err != nil {
+				panic(err)
+			}
+
+			for {
+				select {
+				case <-capture.Off:
+					_ = S.Connection.Close()
+					return
+				case f := <-capture.Framebuffer:
+					sample := media.Sample{
+						Data:    f,
+					}
+
+					if err := localTrack.WriteSample(sample); err != nil {
+						log.Fatal("could not write rtp sample. ", err)
+						return
+					}
+				}
+			}
+		}
+	})
+
 	peerConnection.OnTrack(func(remoteTrack *webrtc.TrackRemote, receiver *webrtc.RTPReceiver) {
+		fmt.Println("ON TRACK")
 		localTrack, err := webrtc.NewTrackLocalStaticSample(remoteTrack.Codec().RTPCodecCapability, "video", "pion")
 		if err != nil {
 			panic(err)

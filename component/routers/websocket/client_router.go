@@ -8,7 +8,7 @@ import (
 )
 
 type ClientRouter struct {
-	routers.HTTPRouter
+	routers.WebSocketRouter
 }
 
 func NewClientRouter(app di.AppInterface, engine... engine.Interface) routers.Router {
@@ -30,7 +30,7 @@ func (P *ClientRouter) RegisterRoutes(e interface{}) {
 }
 
 func (P *ClientRouter) RegisterPeerRoutes(r engine.Interface) {
-	r.AddCommand("GET_ICE", func(c *engine.Context) {
+	r.AddJSON("GET_ICE", func(c *engine.Context) {
 		P.RunController(c, &client.GetICEController{})
 	})
 	r.AddJSON("GET_STATUS", func(c *engine.Context) {

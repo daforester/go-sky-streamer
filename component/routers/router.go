@@ -25,6 +25,7 @@ func (B *BaseRouter) SetContainer(container di.AppInterface) {
 
 func (B *BaseRouter) RunController(context interface{}, controller controllers.Controller) {
 	c := B.container.Make(controller)
+	c.(controllers.Controller).SetContainer(B.container)
 	c.(controllers.Controller).SetContext(context)
 
 	_ = c.(controllers.Controller).Run()

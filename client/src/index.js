@@ -79,7 +79,7 @@ if ('serviceWorker' in navigator) {
       };
     })
     .catch((e) => {
-      Console.log('Service Worker Registration Failed');
-      Console.log(e);
+      console.log('Service Worker Registration Failed');
+      console.log(e);
     });
 }

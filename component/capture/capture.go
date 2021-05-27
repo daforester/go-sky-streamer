@@ -27,16 +27,18 @@ func (C Capture) New() *Capture {
 }
 
 func (C *Capture) Start() error {
+	fmt.Println("START")
 	// Windows Device List
 	// ffmpeg -list_devices true -f dshow -i dummy
 	//C.DevicePath = "@device_pnp_\\\\?\\usb#vid_04ca&pid_707f&mi_00#6&306659e8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global"
-	C.DevicePath = "@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}"
+	//C.DevicePath = "video=\"OBS Virtual Camera\""
+	C.DevicePath = "video=@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}"
 	C.InputFormat = "dshow"
 	// C.InputFormat = "v4l2"
 	C.Height = 1080
 	C.Width = 1920
 
-	cmd := exec.Command("ffmpeg", "-framerate", "30", "-f", C.InputFormat, "-input_format", "h264", "-video_size", fmt.Sprintf("%vx%v", C.Width, C.Height), "-i", C.DevicePath, "-c", "copy", "-f", "h264", "pipe:1")
+	cmd := exec.Command("ffmpeg", "-framerate", "30", "-f", C.InputFormat, "-video_size", fmt.Sprintf("%vx%v", C.Width, C.Height), "-i", C.DevicePath, "-c", "h264", "-f", "h264", "pipe:1")
 	fmt.Println(cmd.Args)
 
 	dataPipe, err := cmd.StdoutPipe()

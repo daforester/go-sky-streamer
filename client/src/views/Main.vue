@@ -17,10 +17,16 @@ export default {
   },
   mounted() {
     this.setupRTC();
-    this.on('ICE_DATA', (event) => {
+    this.$on('ICE_DATA', (event) => {
       try {
-        this.peer.setRemoteDescription(new RTCSessionDescription(JSON.parse(atob(event.Data))));
+        console.log('ICE_DATA event');
+        console.log(event);
+        console.log(atob(event.Data.Offer));
+        this.peer.setRemoteDescription(
+          new RTCSessionDescription(JSON.parse(atob(event.Data.Offer))),
+        );
       } catch (err) {
+        console.log('err');
         console.log(err);
       }
     });
@@ -37,6 +43,7 @@ export default {
       this.peer = pc;
 
       pc.ontrack = (event) => {
+        console.log('ontrack');
         const el = document.createElement(event.track.kind);
         [el.srcObject] = event.streams;
         el.autoplay = true;
@@ -45,11 +52,12 @@ export default {
       };
 
       pc.oniceconnectionstatechange = (event) => {
+        console.log('oniceconnectionstatechange event');
         console.log(event);
       };
 
       pc.onicecandidate = (event) => {
-        if (event.candidate === null) {
+        if (event.candidate === null) { // Finished Gathering
           console.log(JSON.stringify(pc.localDescription));
           const statusUpdate = {
             Command: 'GET_ICE',
@@ -66,8 +74,10 @@ export default {
       pc.addTransceiver('video', { direction: 'sendrecv' });
 
       pc.createOffer().then((localDescription) => {
+        console.log('setLocalDescription');
         pc.setLocalDescription(localDescription);
       }).catch((err) => {
+        console.log('err');
         console.log(err);
       });
     },

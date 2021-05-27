@@ -39,6 +39,24 @@ func (P *ViewRouter) RegisterRoutes(engine interface{}) {
 		c.HTML(http.StatusOK, "index.gohtml", nil)
 	})
 
+	r.GET("/service-worker.js", func(c *gin.Context) {
+		modified, eTag := ginhelper.FileModified(c, viper.GetString("ROOT_PATH") + "/public/service-worker.js")
+		if modified {
+			c.Header("Cache-Control", "no-cache")
+			c.Header("Content-Type", "application/javascript")
+			c.Header("Etag", "\"" + eTag + "\"")
+			c.File(viper.GetString("ROOT_PATH") + "/public/service-worker.js")
+		} else {
+			c.Status(http.StatusNotModified)
+		}
+	})
+
+	r.GET("/favicon.ico", func(c *gin.Context) {
+		c.Header("Cache-Control", "max-age=86400")
+		c.Header("Content-Type", mime.TypeByExtension(".ico"))
+		c.File(viper.GetString("ROOT_PATH") + "/public/favicon.ico")
+	})
+
 	r.GET("/js/client/:filename", func(c *gin.Context) {
 		jsClientPath := viper.GetString("ROOT_PATH") + "/public/js/client/"
 		mainJs := "main.[a-z0-9]+.js"

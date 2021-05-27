@@ -1,12 +1,540 @@
-ffmpeg version n4.4-18-gc813f5e343 Copyright (c) 2000-2021 the FFmpeg developers
-  built with gcc 10-win32 (GCC) 20210408
-  configuration: --prefix=/ffbuild/prefix --pkg-config-flags=--static --pkg-config=pkg-config --cross-prefix=x86_64-w64-mingw32- --arch=x86_64 --target-os=mingw32 --enable-version3 --disable-debug --disable-w32threads --enable-pthreads --enable-iconv --enable-libxml2 --enable-zlib --enable-libfreetype --enable-libfribidi --enable-gmp --enable-lzma --enable-fontconfig --enable-libvorbis --enable-opencl --enable-libvmaf --enable-vulkan --enable-amf --enable-libaom --disable-avisynth --enable-libdav1d --disable-libdavs2 --enable-ffnvcodec --enable-cuda-llvm --enable-libglslang --enable-libgme --enable-libass --enable-libbluray --enable-libmp3lame --enable-libopus --enable-libtheora --enable-libvpx --enable-libwebp --enable-lv2 --enable-libmfx --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librav1e --disable-librubberband --enable-schannel --enable-sdl2 --enable-libsoxr --enable-libsrt --enable-libsvtav1 --enable-libtwolame --enable-libuavs3d --disable-libvidstab --disable-libx264 --disable-libx265 --disable-libxavs2 --disable-libxvid --enable-libzimg --extra-cflags=-DLIBTWOLAME_STATIC --extra-cxxflags= --extra-ldflags=-pthread --extra-ldexeflags= --extra-libs=-lgomp
-  libavutil      56. 70.100 / 56. 70.100
-  libavcodec     58.134.100 / 58.134.100
-  libavformat    58. 76.100 / 58. 76.100
-  libavdevice    58. 13.100 / 58. 13.100
-  libavfilter     7.110.100 /  7.110.100
-  libswscale      5.  9.100 /  5.  9.100
-  libswresample   3.  9.100 /  3.  9.100
-Unrecognized option 'input_format'.
-Error splitting the argument list: Option not found
+ffmpeg version 4.3.1-2021-01-01-full_build-www.gyan.dev Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 10.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-lzma --enable-libsnappy --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libdav1d --enable-libzvbi --enable-librav1e --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-ffnvcodec --enable-nvdec --enable-nvenc --enable-d3d11va --enable-dxva2 --enable-libmfx --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      56. 51.100 / 56. 51.100
+  libavcodec     58. 91.100 / 58. 91.100
+  libavformat    58. 45.100 / 58. 45.100
+  libavdevice    58. 10.100 / 58. 10.100
+  libavfilter     7. 85.100 /  7. 85.100
+  libswscale      5.  7.100 /  5.  7.100
+  libswresample   3.  7.100 /  3.  7.100
+  libpostproc    55.  7.100 / 55.  7.100
+Input #0, dshow, from 'video=@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}':
+  Duration: N/A, start: 517183.662000, bitrate: N/A
+    Stream #0:0: Video: rawvideo (NV12 / 0x3231564E), nv12, 1920x1080, 30 fps, 30 tbr, 10000k tbn, 10000k tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (rawvideo (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 000002b49aa6ab80] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000002b49aa6ab80] profile High, level 4.0, 4:2:0, 8-bit
+Output #0, h264, to 'pipe:1':
+  Metadata:
+    encoder         : Lavf58.45.100
+    Stream #0:0: Video: h264 (libx264), nv12, 1920x1080, q=-1--1, 30 fps, 30 tbn, 30 tbc
+    Metadata:
+      encoder         : Lavc58.91.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+[dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame=   18 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A dup=0 drop=11 speed=   0x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame=   33 fps= 32 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A dup=0 drop=24 speed=   0x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 6 times
+frame=   48 fps= 32 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A dup=0 drop=31 speed=   0x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame=   63 fps= 31 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A dup=0 drop=42 speed=   0x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame=   78 fps= 31 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A dup=0 drop=52 speed=   0x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame=   93 fps= 31 q=29.0 size=       4kB time=00:00:00.43 bitrate=  70.9kbits/s dup=0 drop=62 speed=0.143x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+frame=  109 fps= 31 q=29.0 size=       5kB time=00:00:00.96 bitrate=  41.5kbits/s dup=0 drop=77 speed=0.273x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame=  124 fps= 31 q=29.0 size=       6kB time=00:00:01.46 bitrate=  33.3kbits/s dup=0 drop=89 speed=0.363x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame=  139 fps= 31 q=29.0 size=       7kB time=00:00:01.96 bitrate=  29.3kbits/s dup=0 drop=102 speed=0.433x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame=  154 fps= 30 q=29.0 size=       8kB time=00:00:02.46 bitrate=  26.9kbits/s dup=0 drop=112 speed=0.488x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame=  170 fps= 30 q=29.0 size=       9kB time=00:00:02.99 bitrate=  25.2kbits/s dup=0 drop=125 speed=0.538x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame=  185 fps= 30 q=29.0 size=      10kB time=00:00:03.49 bitrate=  24.1kbits/s dup=0 drop=137 speed=0.574x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 539 times
+frame=  196 fps= 13 q=29.0 size=      11kB time=00:00:03.86 bitrate=  23.5kbits/s dup=0 drop=146 speed=0.251x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 25 times
+frame=  478 fps= 30 q=29.0 size=      33kB time=00:00:13.26 bitrate=  20.5kbits/s dup=277 drop=146 speed=0.833x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame=  496 fps= 30 q=29.0 size=      34kB time=00:00:13.86 bitrate=  20.4kbits/s dup=277 drop=155 speed=0.844x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame=  510 fps= 30 q=29.0 size=      35kB time=00:00:14.33 bitrate=  20.3kbits/s dup=277 drop=167 speed=0.846x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame=  526 fps= 30 q=29.0 size=      37kB time=00:00:14.86 bitrate=  20.2kbits/s dup=277 drop=180 speed=0.852x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame=  541 fps= 30 q=29.0 size=      38kB time=00:00:15.36 bitrate=  20.1kbits/s dup=277 drop=192 speed=0.856x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame=  556 fps= 30 q=29.0 size=      39kB time=00:00:15.86 bitrate=  20.0kbits/s dup=277 drop=206 speed=0.859x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame=  572 fps= 30 q=29.0 size=      40kB time=00:00:16.39 bitrate=  19.9kbits/s dup=277 drop=217 speed=0.864x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+frame=  587 fps= 30 q=29.0 size=      43kB time=00:00:16.89 bitrate=  20.9kbits/s dup=277 drop=231 speed=0.867x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame=  603 fps= 30 q=29.0 size=      44kB time=00:00:17.43 bitrate=  20.8kbits/s dup=277 drop=242 speed=0.872x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame=  618 fps= 30 q=29.0 size=      45kB time=00:00:17.93 bitrate=  20.7kbits/s dup=277 drop=253 speed=0.874x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+frame=  633 fps= 30 q=29.0 size=      46kB time=00:00:18.43 bitrate=  20.6kbits/s dup=277 drop=267 speed=0.877x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame=  649 fps= 30 q=29.0 size=      47kB time=00:00:18.96 bitrate=  20.5kbits/s dup=277 drop=279 speed=0.88x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame=  664 fps= 30 q=29.0 size=      48kB time=00:00:19.46 bitrate=  20.4kbits/s dup=277 drop=289 speed=0.883x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame=  679 fps= 30 q=29.0 size=      50kB time=00:00:19.96 bitrate=  20.3kbits/s dup=277 drop=302 speed=0.885x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame=  695 fps= 30 q=29.0 size=      51kB time=00:00:20.49 bitrate=  20.2kbits/s dup=277 drop=316 speed=0.888x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame=  710 fps= 30 q=29.0 size=      52kB time=00:00:20.99 bitrate=  20.2kbits/s dup=277 drop=326 speed=0.891x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame=  725 fps= 30 q=29.0 size=      53kB time=00:00:21.49 bitrate=  20.1kbits/s dup=277 drop=337 speed=0.893x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame=  740 fps= 30 q=29.0 size=      54kB time=00:00:21.99 bitrate=  20.0kbits/s dup=277 drop=347 speed=0.895x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame=  756 fps= 30 q=29.0 size=      55kB time=00:00:22.53 bitrate=  20.0kbits/s dup=277 drop=358 speed=0.897x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame=  771 fps= 30 q=29.0 size=      56kB time=00:00:23.03 bitrate=  19.9kbits/s dup=277 drop=370 speed=0.899x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame=  787 fps= 30 q=29.0 size=      57kB time=00:00:23.56 bitrate=  19.8kbits/s dup=277 drop=382 speed=0.902x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame=  802 fps= 30 q=29.0 size=      58kB time=00:00:24.06 bitrate=  19.8kbits/s dup=277 drop=393 speed=0.903x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame=  817 fps= 30 q=29.0 size=      59kB time=00:00:24.56 bitrate=  19.7kbits/s dup=277 drop=406 speed=0.905x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame=  832 fps= 30 q=29.0 size=      62kB time=00:00:25.06 bitrate=  20.4kbits/s dup=277 drop=419 speed=0.906x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame=  848 fps= 30 q=29.0 size=      64kB time=00:00:25.59 bitrate=  20.3kbits/s dup=277 drop=430 speed=0.909x    frame=  863 fps= 30 q=29.0 size=      65kB time=00:00:26.09 bitrate=  20.3kbits/s dup=277 drop=445 speed=0.91x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame=  878 fps= 30 q=29.0 size=      66kB time=00:00:26.59 bitrate=  20.2kbits/s dup=277 drop=457 speed=0.911x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame=  894 fps= 30 q=29.0 size=      67kB time=00:00:27.13 bitrate=  20.2kbits/s dup=277 drop=469 speed=0.913x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame=  909 fps= 30 q=29.0 size=      68kB time=00:00:27.63 bitrate=  20.1kbits/s dup=277 drop=480 speed=0.915x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame=  924 fps= 30 q=29.0 size=      69kB time=00:00:28.13 bitrate=  20.1kbits/s dup=277 drop=491 speed=0.916x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame=  939 fps= 30 q=29.0 size=      70kB time=00:00:28.63 bitrate=  20.0kbits/s dup=277 drop=503 speed=0.917x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame=  955 fps= 30 q=29.0 size=      71kB time=00:00:29.16 bitrate=  20.0kbits/s dup=277 drop=515 speed=0.919x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame=  970 fps= 30 q=29.0 size=      72kB time=00:00:29.66 bitrate=  19.9kbits/s dup=277 drop=527 speed=0.92x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame=  985 fps= 30 q=29.0 size=      73kB time=00:00:30.16 bitrate=  19.9kbits/s dup=277 drop=540 speed=0.921x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 5 times
+frame= 1001 fps= 30 q=29.0 size=      74kB time=00:00:30.69 bitrate=  19.8kbits/s dup=277 drop=550 speed=0.922x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 1016 fps= 30 q=29.0 size=      75kB time=00:00:31.19 bitrate=  19.8kbits/s dup=277 drop=561 speed=0.923x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 1032 fps= 30 q=29.0 size=      76kB time=00:00:31.73 bitrate=  19.7kbits/s dup=277 drop=572 speed=0.925x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1047 fps= 30 q=29.0 size=      77kB time=00:00:32.23 bitrate=  19.7kbits/s dup=277 drop=583 speed=0.925x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1063 fps= 30 q=29.0 size=      79kB time=00:00:32.76 bitrate=  19.7kbits/s dup=277 drop=595 speed=0.927x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 1078 fps= 30 q=29.0 size=      80kB time=00:00:33.26 bitrate=  19.6kbits/s dup=277 drop=607 speed=0.928x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 5 times
+frame= 1093 fps= 30 q=29.0 size=      83kB time=00:00:33.76 bitrate=  20.1kbits/s dup=277 drop=616 speed=0.929x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1109 fps= 30 q=29.0 size=      84kB time=00:00:34.29 bitrate=  20.1kbits/s dup=277 drop=628 speed=0.93x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 1124 fps= 30 q=29.0 size=      85kB time=00:00:34.79 bitrate=  20.0kbits/s dup=277 drop=640 speed=0.931x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 1140 fps= 30 q=29.0 size=      86kB time=00:00:35.33 bitrate=  20.0kbits/s dup=277 drop=653 speed=0.932x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 1155 fps= 30 q=29.0 size=      87kB time=00:00:35.83 bitrate=  20.0kbits/s dup=277 drop=665 speed=0.933x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1170 fps= 30 q=29.0 size=      88kB time=00:00:36.33 bitrate=  19.9kbits/s dup=277 drop=676 speed=0.933x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1185 fps= 30 q=29.0 size=      89kB time=00:00:36.83 bitrate=  19.9kbits/s dup=277 drop=688 speed=0.934x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 1201 fps= 30 q=29.0 size=      90kB time=00:00:37.36 bitrate=  19.8kbits/s dup=277 drop=700 speed=0.935x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 1216 fps= 30 q=29.0 size=      92kB time=00:00:37.86 bitrate=  19.8kbits/s dup=277 drop=711 speed=0.936x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 1232 fps= 30 q=29.0 size=      93kB time=00:00:38.39 bitrate=  19.8kbits/s dup=277 drop=722 speed=0.937x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 1247 fps= 30 q=29.0 size=      94kB time=00:00:38.89 bitrate=  19.7kbits/s dup=277 drop=734 speed=0.937x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 5 times
+frame= 1263 fps= 30 q=29.0 size=      95kB time=00:00:39.43 bitrate=  19.7kbits/s dup=277 drop=744 speed=0.939x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 1278 fps= 30 q=29.0 size=      96kB time=00:00:39.93 bitrate=  19.7kbits/s dup=277 drop=756 speed=0.939x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1294 fps= 30 q=29.0 size=      97kB time=00:00:40.46 bitrate=  19.6kbits/s dup=277 drop=767 speed=0.94x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 5 times
+frame= 1308 fps= 30 q=29.0 size=      98kB time=00:00:40.93 bitrate=  19.6kbits/s dup=277 drop=777 speed=0.94x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 1324 fps= 30 q=29.0 size=      99kB time=00:00:41.46 bitrate=  19.6kbits/s dup=277 drop=789 speed=0.941x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 1339 fps= 30 q=29.0 size=     102kB time=00:00:41.96 bitrate=  20.0kbits/s dup=277 drop=801 speed=0.942x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 1355 fps= 30 q=29.0 size=     104kB time=00:00:42.49 bitrate=  20.0kbits/s dup=277 drop=814 speed=0.943x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 1370 fps= 30 q=29.0 size=     105kB time=00:00:42.99 bitrate=  19.9kbits/s dup=277 drop=826 speed=0.943x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 1386 fps= 30 q=29.0 size=     106kB time=00:00:43.53 bitrate=  19.9kbits/s dup=277 drop=839 speed=0.944x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 1401 fps= 30 q=29.0 size=     107kB time=00:00:44.03 bitrate=  19.9kbits/s dup=277 drop=851 speed=0.945x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 1416 fps= 30 q=29.0 size=     108kB time=00:00:44.53 bitrate=  19.8kbits/s dup=277 drop=861 speed=0.945x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 1432 fps= 30 q=29.0 size=     109kB time=00:00:45.06 bitrate=  19.8kbits/s dup=277 drop=874 speed=0.946x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1447 fps= 30 q=29.0 size=     110kB time=00:00:45.56 bitrate=  19.8kbits/s dup=277 drop=885 speed=0.947x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 1462 fps= 30 q=29.0 size=     111kB time=00:00:46.06 bitrate=  19.7kbits/s dup=277 drop=897 speed=0.947x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1478 fps= 30 q=29.0 size=     112kB time=00:00:46.59 bitrate=  19.7kbits/s dup=277 drop=909 speed=0.948x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 1493 fps= 30 q=29.0 size=     113kB time=00:00:47.09 bitrate=  19.7kbits/s dup=277 drop=922 speed=0.948x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 1508 fps= 30 q=29.0 size=     114kB time=00:00:47.59 bitrate=  19.7kbits/s dup=277 drop=935 speed=0.948x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1523 fps= 30 q=29.0 size=     115kB time=00:00:48.09 bitrate=  19.6kbits/s dup=277 drop=947 speed=0.949x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+frame= 1539 fps= 30 q=29.0 size=     116kB time=00:00:48.63 bitrate=  19.6kbits/s dup=277 drop=961 speed=0.95x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 1554 fps= 30 q=29.0 size=     117kB time=00:00:49.13 bitrate=  19.6kbits/s dup=277 drop=975 speed=0.95x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1569 fps= 30 q=29.0 size=     118kB time=00:00:49.63 bitrate=  19.5kbits/s dup=277 drop=986 speed=0.95x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1585 fps= 30 q=29.0 size=     122kB time=00:00:50.16 bitrate=  19.9kbits/s dup=277 drop=997 speed=0.951x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 1600 fps= 30 q=29.0 size=     123kB time=00:00:50.66 bitrate=  19.9kbits/s dup=277 drop=1011 speed=0.951x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+frame= 1616 fps= 30 q=29.0 size=     124kB time=00:00:51.19 bitrate=  19.8kbits/s dup=277 drop=1025 speed=0.952x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1631 fps= 30 q=29.0 size=     125kB time=00:00:51.69 bitrate=  19.8kbits/s dup=277 drop=1036 speed=0.952x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 1646 fps= 30 q=29.0 size=     126kB time=00:00:52.19 bitrate=  19.8kbits/s dup=277 drop=1049 speed=0.953x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 1661 fps= 30 q=29.0 size=     127kB time=00:00:52.69 bitrate=  19.8kbits/s dup=277 drop=1060 speed=0.953x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1677 fps= 30 q=29.0 size=     128kB time=00:00:53.23 bitrate=  19.7kbits/s dup=277 drop=1071 speed=0.954x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 1692 fps= 30 q=29.0 size=     129kB time=00:00:53.73 bitrate=  19.7kbits/s dup=277 drop=1084 speed=0.954x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 1707 fps= 30 q=29.0 size=     130kB time=00:00:54.23 bitrate=  19.7kbits/s dup=277 drop=1094 speed=0.954x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1723 fps= 30 q=29.0 size=     131kB time=00:00:54.76 bitrate=  19.7kbits/s dup=277 drop=1106 speed=0.955x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 5 times
+frame= 1738 fps= 30 q=29.0 size=     133kB time=00:00:55.26 bitrate=  19.6kbits/s dup=277 drop=1115 speed=0.955x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 1753 fps= 30 q=29.0 size=     134kB time=00:00:55.76 bitrate=  19.6kbits/s dup=277 drop=1125 speed=0.956x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1769 fps= 30 q=29.0 size=     135kB time=00:00:56.29 bitrate=  19.6kbits/s dup=277 drop=1137 speed=0.956x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1784 fps= 30 q=29.0 size=     136kB time=00:00:56.79 bitrate=  19.6kbits/s dup=277 drop=1148 speed=0.957x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 1799 fps= 30 q=29.0 size=     137kB time=00:00:57.29 bitrate=  19.6kbits/s dup=277 drop=1158 speed=0.957x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 1814 fps= 30 q=29.0 size=     138kB time=00:00:57.79 bitrate=  19.5kbits/s dup=277 drop=1170 speed=0.957x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 1829 fps= 30 q=29.0 size=     141kB time=00:00:58.29 bitrate=  19.8kbits/s dup=277 drop=1181 speed=0.957x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 1845 fps= 30 q=29.0 size=     142kB time=00:00:58.83 bitrate=  19.8kbits/s dup=277 drop=1194 speed=0.958x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1860 fps= 30 q=29.0 size=     143kB time=00:00:59.33 bitrate=  19.8kbits/s dup=277 drop=1205 speed=0.958x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 1876 fps= 30 q=29.0 size=     144kB time=00:00:59.86 bitrate=  19.8kbits/s dup=277 drop=1219 speed=0.959x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 5 times
+frame= 1891 fps= 30 q=29.0 size=     145kB time=00:01:00.36 bitrate=  19.7kbits/s dup=277 drop=1229 speed=0.959x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1906 fps= 30 q=29.0 size=     147kB time=00:01:00.86 bitrate=  19.7kbits/s dup=277 drop=1241 speed=0.959x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1922 fps= 30 q=29.0 size=     148kB time=00:01:01.39 bitrate=  19.7kbits/s dup=277 drop=1252 speed=0.96x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 1937 fps= 30 q=29.0 size=     149kB time=00:01:01.89 bitrate=  19.7kbits/s dup=277 drop=1264 speed=0.96x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 1953 fps= 30 q=29.0 size=     150kB time=00:01:02.43 bitrate=  19.7kbits/s dup=277 drop=1277 speed=0.961x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 1968 fps= 30 q=29.0 size=     151kB time=00:01:02.93 bitrate=  19.6kbits/s dup=277 drop=1289 speed=0.961x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 1983 fps= 30 q=29.0 size=     152kB time=00:01:03.43 bitrate=  19.6kbits/s dup=277 drop=1301 speed=0.961x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 1998 fps= 30 q=29.0 size=     153kB time=00:01:03.93 bitrate=  19.6kbits/s dup=277 drop=1312 speed=0.961x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 2013 fps= 30 q=29.0 size=     154kB time=00:01:04.43 bitrate=  19.6kbits/s dup=277 drop=1323 speed=0.961x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 2028 fps= 30 q=29.0 size=     155kB time=00:01:04.93 bitrate=  19.6kbits/s dup=277 drop=1333 speed=0.962x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2044 fps= 30 q=29.0 size=     156kB time=00:01:05.46 bitrate=  19.5kbits/s dup=277 drop=1345 speed=0.962x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 2059 fps= 30 q=29.0 size=     157kB time=00:01:05.96 bitrate=  19.5kbits/s dup=277 drop=1358 speed=0.962x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 2075 fps= 30 q=29.0 size=     158kB time=00:01:06.49 bitrate=  19.5kbits/s dup=277 drop=1370 speed=0.963x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2090 fps= 30 q=29.0 size=     162kB time=00:01:06.99 bitrate=  19.8kbits/s dup=277 drop=1382 speed=0.963x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 2106 fps= 30 q=29.0 size=     163kB time=00:01:07.53 bitrate=  19.7kbits/s dup=277 drop=1394 speed=0.963x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 5 times
+frame= 2121 fps= 30 q=29.0 size=     164kB time=00:01:08.03 bitrate=  19.7kbits/s dup=277 drop=1403 speed=0.964x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2136 fps= 30 q=29.0 size=     165kB time=00:01:08.53 bitrate=  19.7kbits/s dup=277 drop=1415 speed=0.964x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 2151 fps= 30 q=29.0 size=     166kB time=00:01:09.03 bitrate=  19.7kbits/s dup=277 drop=1426 speed=0.964x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2167 fps= 30 q=29.0 size=     167kB time=00:01:09.56 bitrate=  19.7kbits/s dup=277 drop=1439 speed=0.964x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 2182 fps= 30 q=29.0 size=     168kB time=00:01:10.06 bitrate=  19.6kbits/s dup=277 drop=1450 speed=0.965x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 2197 fps= 30 q=29.0 size=     169kB time=00:01:10.56 bitrate=  19.6kbits/s dup=277 drop=1463 speed=0.965x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 2212 fps= 30 q=29.0 size=     170kB time=00:01:11.06 bitrate=  19.6kbits/s dup=277 drop=1474 speed=0.965x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 2227 fps= 30 q=29.0 size=     171kB time=00:01:11.56 bitrate=  19.6kbits/s dup=277 drop=1485 speed=0.965x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2243 fps= 30 q=29.0 size=     172kB time=00:01:12.09 bitrate=  19.6kbits/s dup=277 drop=1497 speed=0.965x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 2258 fps= 30 q=29.0 size=     173kB time=00:01:12.59 bitrate=  19.6kbits/s dup=277 drop=1509 speed=0.966x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 2273 fps= 30 q=29.0 size=     174kB time=00:01:13.09 bitrate=  19.5kbits/s dup=277 drop=1520 speed=0.966x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 2289 fps= 30 q=29.0 size=     176kB time=00:01:13.63 bitrate=  19.5kbits/s dup=277 drop=1533 speed=0.966x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 2304 fps= 30 q=29.0 size=     177kB time=00:01:14.13 bitrate=  19.5kbits/s dup=277 drop=1544 speed=0.966x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2319 fps= 30 q=29.0 size=     178kB time=00:01:14.63 bitrate=  19.5kbits/s dup=277 drop=1556 speed=0.967x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 5 times
+frame= 2334 fps= 30 q=29.0 size=     181kB time=00:01:15.13 bitrate=  19.7kbits/s dup=277 drop=1565 speed=0.967x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2350 fps= 30 q=29.0 size=     182kB time=00:01:15.66 bitrate=  19.7kbits/s dup=277 drop=1577 speed=0.967x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 2365 fps= 30 q=29.0 size=     183kB time=00:01:16.16 bitrate=  19.7kbits/s dup=277 drop=1587 speed=0.967x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2380 fps= 30 q=29.0 size=     184kB time=00:01:16.66 bitrate=  19.7kbits/s dup=277 drop=1599 speed=0.967x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 2396 fps= 30 q=29.0 size=     185kB time=00:01:17.19 bitrate=  19.7kbits/s dup=277 drop=1611 speed=0.968x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2411 fps= 30 q=29.0 size=     186kB time=00:01:17.69 bitrate=  19.6kbits/s dup=277 drop=1623 speed=0.968x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 2427 fps= 30 q=29.0 size=     187kB time=00:01:18.23 bitrate=  19.6kbits/s dup=277 drop=1635 speed=0.968x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 2442 fps= 30 q=29.0 size=     188kB time=00:01:18.73 bitrate=  19.6kbits/s dup=277 drop=1645 speed=0.968x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 2457 fps= 30 q=29.0 size=     189kB time=00:01:19.23 bitrate=  19.6kbits/s dup=277 drop=1658 speed=0.968x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 2473 fps= 30 q=29.0 size=     191kB time=00:01:19.76 bitrate=  19.6kbits/s dup=277 drop=1670 speed=0.969x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2488 fps= 30 q=29.0 size=     192kB time=00:01:20.26 bitrate=  19.6kbits/s dup=277 drop=1682 speed=0.969x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 5 times
+frame= 2504 fps= 30 q=29.0 size=     193kB time=00:01:20.79 bitrate=  19.5kbits/s dup=277 drop=1692 speed=0.969x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 2519 fps= 30 q=29.0 size=     194kB time=00:01:21.29 bitrate=  19.5kbits/s dup=277 drop=1705 speed=0.969x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 5 times
+frame= 2535 fps= 30 q=29.0 size=     195kB time=00:01:21.83 bitrate=  19.5kbits/s dup=277 drop=1715 speed=0.97x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 6 times
+frame= 2550 fps= 30 q=29.0 size=     196kB time=00:01:22.33 bitrate=  19.5kbits/s dup=277 drop=1724 speed=0.97x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2565 fps= 30 q=29.0 size=     197kB time=00:01:22.83 bitrate=  19.5kbits/s dup=277 drop=1735 speed=0.97x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 2580 fps= 30 q=29.0 size=     200kB time=00:01:23.33 bitrate=  19.7kbits/s dup=277 drop=1745 speed=0.97x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 6 times
+frame= 2596 fps= 30 q=29.0 size=     201kB time=00:01:23.86 bitrate=  19.7kbits/s dup=277 drop=1755 speed=0.97x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 2611 fps= 30 q=29.0 size=     203kB time=00:01:24.36 bitrate=  19.7kbits/s dup=277 drop=1766 speed=0.97x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 2627 fps= 30 q=29.0 size=     204kB time=00:01:24.89 bitrate=  19.6kbits/s dup=277 drop=1776 speed=0.971x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2642 fps= 30 q=29.0 size=     205kB time=00:01:25.39 bitrate=  19.6kbits/s dup=277 drop=1789 speed=0.971x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 2658 fps= 30 q=29.0 size=     206kB time=00:01:25.93 bitrate=  19.6kbits/s dup=277 drop=1800 speed=0.971x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2673 fps= 30 q=29.0 size=     207kB time=00:01:26.43 bitrate=  19.6kbits/s dup=277 drop=1813 speed=0.971x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 2688 fps= 30 q=29.0 size=     208kB time=00:01:26.93 bitrate=  19.6kbits/s dup=277 drop=1824 speed=0.971x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2704 fps= 30 q=29.0 size=     209kB time=00:01:27.46 bitrate=  19.6kbits/s dup=277 drop=1836 speed=0.971x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2719 fps= 30 q=29.0 size=     210kB time=00:01:27.96 bitrate=  19.6kbits/s dup=277 drop=1848 speed=0.972x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+frame= 2734 fps= 30 q=29.0 size=     211kB time=00:01:28.46 bitrate=  19.5kbits/s dup=277 drop=1862 speed=0.972x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 2749 fps= 30 q=29.0 size=     212kB time=00:01:28.96 bitrate=  19.5kbits/s dup=277 drop=1873 speed=0.972x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2765 fps= 30 q=29.0 size=     213kB time=00:01:29.49 bitrate=  19.5kbits/s dup=277 drop=1886 speed=0.972x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2780 fps= 30 q=29.0 size=     214kB time=00:01:29.99 bitrate=  19.5kbits/s dup=277 drop=1898 speed=0.972x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 2796 fps= 30 q=26.0 size=     215kB time=00:01:30.53 bitrate=  19.5kbits/s dup=277 drop=1912 speed=0.972x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2811 fps= 30 q=29.0 size=     216kB time=00:01:31.03 bitrate=  19.5kbits/s dup=277 drop=1924 speed=0.972x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 2827 fps= 30 q=29.0 size=     218kB time=00:01:31.56 bitrate=  19.5kbits/s dup=277 drop=1936 speed=0.973x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+frame= 2842 fps= 30 q=29.0 size=     221kB time=00:01:32.06 bitrate=  19.7kbits/s dup=277 drop=1950 speed=0.973x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2857 fps= 30 q=29.0 size=     222kB time=00:01:32.56 bitrate=  19.6kbits/s dup=277 drop=1962 speed=0.973x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 2872 fps= 30 q=29.0 size=     223kB time=00:01:33.06 bitrate=  19.6kbits/s dup=277 drop=1972 speed=0.973x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2888 fps= 30 q=29.0 size=     224kB time=00:01:33.59 bitrate=  19.6kbits/s dup=277 drop=1985 speed=0.973x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 2903 fps= 30 q=29.0 size=     225kB time=00:01:34.09 bitrate=  19.6kbits/s dup=277 drop=1997 speed=0.973x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 2918 fps= 30 q=29.0 size=     226kB time=00:01:34.59 bitrate=  19.6kbits/s dup=277 drop=2010 speed=0.973x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 5 times
+frame= 2934 fps= 30 q=29.0 size=     227kB time=00:01:35.13 bitrate=  19.6kbits/s dup=277 drop=2020 speed=0.974x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 5 times
+frame= 2949 fps= 30 q=29.0 size=     228kB time=00:01:35.63 bitrate=  19.6kbits/s dup=277 drop=2029 speed=0.974x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 2964 fps= 30 q=29.0 size=     229kB time=00:01:36.13 bitrate=  19.5kbits/s dup=277 drop=2042 speed=0.974x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 2980 fps= 30 q=29.0 size=     231kB time=00:01:36.66 bitrate=  19.5kbits/s dup=277 drop=2054 speed=0.974x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 2995 fps= 30 q=29.0 size=     232kB time=00:01:37.16 bitrate=  19.5kbits/s dup=277 drop=2065 speed=0.974x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 3011 fps= 30 q=29.0 size=     233kB time=00:01:37.69 bitrate=  19.5kbits/s dup=277 drop=2077 speed=0.974x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3026 fps= 30 q=29.0 size=     234kB time=00:01:38.19 bitrate=  19.5kbits/s dup=277 drop=2088 speed=0.974x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3041 fps= 30 q=29.0 size=     235kB time=00:01:38.69 bitrate=  19.5kbits/s dup=277 drop=2100 speed=0.975x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3056 fps= 30 q=29.0 size=     236kB time=00:01:39.19 bitrate=  19.5kbits/s dup=277 drop=2110 speed=0.975x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 3071 fps= 30 q=29.0 size=     237kB time=00:01:39.69 bitrate=  19.5kbits/s dup=277 drop=2122 speed=0.975x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 3087 fps= 30 q=29.0 size=     240kB time=00:01:40.23 bitrate=  19.6kbits/s dup=277 drop=2135 speed=0.975x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 3102 fps= 30 q=29.0 size=     241kB time=00:01:40.73 bitrate=  19.6kbits/s dup=277 drop=2147 speed=0.975x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3117 fps= 30 q=29.0 size=     242kB time=00:01:41.23 bitrate=  19.6kbits/s dup=277 drop=2158 speed=0.975x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3132 fps= 30 q=29.0 size=     243kB time=00:01:41.73 bitrate=  19.6kbits/s dup=277 drop=2169 speed=0.975x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 3148 fps= 30 q=29.0 size=     245kB time=00:01:42.26 bitrate=  19.6kbits/s dup=277 drop=2180 speed=0.975x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 3163 fps= 30 q=29.0 size=     246kB time=00:01:42.76 bitrate=  19.6kbits/s dup=277 drop=2190 speed=0.975x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3178 fps= 30 q=29.0 size=     247kB time=00:01:43.26 bitrate=  19.6kbits/s dup=277 drop=2201 speed=0.976x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3194 fps= 30 q=29.0 size=     248kB time=00:01:43.79 bitrate=  19.6kbits/s dup=277 drop=2213 speed=0.976x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 3209 fps= 30 q=29.0 size=     249kB time=00:01:44.29 bitrate=  19.5kbits/s dup=277 drop=2223 speed=0.976x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3224 fps= 30 q=29.0 size=     250kB time=00:01:44.79 bitrate=  19.5kbits/s dup=277 drop=2234 speed=0.976x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3239 fps= 30 q=29.0 size=     251kB time=00:01:45.29 bitrate=  19.5kbits/s dup=277 drop=2245 speed=0.976x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 3255 fps= 30 q=29.0 size=     252kB time=00:01:45.83 bitrate=  19.5kbits/s dup=277 drop=2259 speed=0.976x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 3270 fps= 30 q=29.0 size=     253kB time=00:01:46.33 bitrate=  19.5kbits/s dup=277 drop=2269 speed=0.976x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3286 fps= 30 q=29.0 size=     254kB time=00:01:46.86 bitrate=  19.5kbits/s dup=277 drop=2281 speed=0.977x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 5 times
+frame= 3300 fps= 30 q=29.0 size=     255kB time=00:01:47.33 bitrate=  19.5kbits/s dup=277 drop=2290 speed=0.976x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3316 fps= 30 q=29.0 size=     256kB time=00:01:47.86 bitrate=  19.5kbits/s dup=277 drop=2302 speed=0.977x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 5 times
+frame= 3331 fps= 30 q=29.0 size=     260kB time=00:01:48.36 bitrate=  19.6kbits/s dup=277 drop=2311 speed=0.977x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3346 fps= 30 q=29.0 size=     261kB time=00:01:48.86 bitrate=  19.6kbits/s dup=277 drop=2322 speed=0.977x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 3362 fps= 30 q=29.0 size=     262kB time=00:01:49.39 bitrate=  19.6kbits/s dup=277 drop=2333 speed=0.977x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3377 fps= 30 q=29.0 size=     263kB time=00:01:49.89 bitrate=  19.6kbits/s dup=277 drop=2343 speed=0.977x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 3392 fps= 30 q=29.0 size=     264kB time=00:01:50.39 bitrate=  19.6kbits/s dup=277 drop=2356 speed=0.977x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 3408 fps= 30 q=29.0 size=     265kB time=00:01:50.93 bitrate=  19.6kbits/s dup=277 drop=2367 speed=0.977x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 3423 fps= 30 q=29.0 size=     266kB time=00:01:51.43 bitrate=  19.6kbits/s dup=277 drop=2379 speed=0.977x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 3439 fps= 30 q=29.0 size=     267kB time=00:01:51.96 bitrate=  19.5kbits/s dup=277 drop=2390 speed=0.977x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3454 fps= 30 q=29.0 size=     268kB time=00:01:52.46 bitrate=  19.5kbits/s dup=277 drop=2401 speed=0.977x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+frame= 3470 fps= 30 q=29.0 size=     269kB time=00:01:52.99 bitrate=  19.5kbits/s dup=277 drop=2416 speed=0.978x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 3485 fps= 30 q=29.0 size=     270kB time=00:01:53.49 bitrate=  19.5kbits/s dup=277 drop=2429 speed=0.978x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3500 fps= 30 q=29.0 size=     271kB time=00:01:53.99 bitrate=  19.5kbits/s dup=277 drop=2440 speed=0.978x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 3516 fps= 30 q=29.0 size=     272kB time=00:01:54.53 bitrate=  19.5kbits/s dup=277 drop=2454 speed=0.978x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 3531 fps= 30 q=29.0 size=     274kB time=00:01:55.03 bitrate=  19.5kbits/s dup=277 drop=2467 speed=0.978x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 3546 fps= 30 q=26.0 size=     275kB time=00:01:55.53 bitrate=  19.5kbits/s dup=277 drop=2477 speed=0.978x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3561 fps= 30 q=29.0 size=     276kB time=00:01:56.03 bitrate=  19.5kbits/s dup=277 drop=2488 speed=0.978x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3576 fps= 30 q=29.0 size=     277kB time=00:01:56.53 bitrate=  19.4kbits/s dup=277 drop=2499 speed=0.978x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 3592 fps= 30 q=29.0 size=     280kB time=00:01:57.06 bitrate=  19.6kbits/s dup=277 drop=2512 speed=0.979x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 3607 fps= 30 q=29.0 size=     281kB time=00:01:57.56 bitrate=  19.6kbits/s dup=277 drop=2522 speed=0.979x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 3622 fps= 30 q=29.0 size=     282kB time=00:01:58.06 bitrate=  19.6kbits/s dup=277 drop=2535 speed=0.979x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 3637 fps= 30 q=29.0 size=     283kB time=00:01:58.56 bitrate=  19.6kbits/s dup=277 drop=2547 speed=0.979x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 3652 fps= 30 q=29.0 size=     284kB time=00:01:59.06 bitrate=  19.6kbits/s dup=277 drop=2561 speed=0.979x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 3668 fps= 30 q=29.0 size=     285kB time=00:01:59.59 bitrate=  19.5kbits/s dup=277 drop=2572 speed=0.979x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 3684 fps= 30 q=29.0 size=     286kB time=00:02:00.13 bitrate=  19.5kbits/s dup=277 drop=2582 speed=0.979x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 3699 fps= 30 q=29.0 size=     288kB time=00:02:00.63 bitrate=  19.5kbits/s dup=277 drop=2595 speed=0.979x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 3714 fps= 30 q=29.0 size=     289kB time=00:02:01.13 bitrate=  19.5kbits/s dup=277 drop=2608 speed=0.979x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3729 fps= 30 q=29.0 size=     290kB time=00:02:01.63 bitrate=  19.5kbits/s dup=277 drop=2621 speed=0.979x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 5 times
+frame= 3745 fps= 30 q=29.0 size=     291kB time=00:02:02.16 bitrate=  19.5kbits/s dup=277 drop=2629 speed=0.979x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3760 fps= 30 q=29.0 size=     292kB time=00:02:02.66 bitrate=  19.5kbits/s dup=277 drop=2641 speed=0.979x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3776 fps= 30 q=29.0 size=     293kB time=00:02:03.19 bitrate=  19.5kbits/s dup=277 drop=2652 speed=0.979x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 3791 fps= 30 q=29.0 size=     294kB time=00:02:03.69 bitrate=  19.5kbits/s dup=277 drop=2664 speed=0.979x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3807 fps= 30 q=29.0 size=     295kB time=00:02:04.23 bitrate=  19.5kbits/s dup=277 drop=2676 speed=0.98x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3822 fps= 30 q=29.0 size=     296kB time=00:02:04.73 bitrate=  19.4kbits/s dup=277 drop=2687 speed=0.98x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 3837 fps= 30 q=29.0 size=     299kB time=00:02:05.23 bitrate=  19.6kbits/s dup=277 drop=2697 speed=0.98x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3853 fps= 30 q=29.0 size=     301kB time=00:02:05.76 bitrate=  19.6kbits/s dup=277 drop=2709 speed=0.98x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3868 fps= 30 q=29.0 size=     302kB time=00:02:06.26 bitrate=  19.6kbits/s dup=277 drop=2720 speed=0.98x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+frame= 3883 fps= 30 q=29.0 size=     303kB time=00:02:06.76 bitrate=  19.6kbits/s dup=277 drop=2734 speed=0.98x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 3899 fps= 30 q=29.0 size=     304kB time=00:02:07.29 bitrate=  19.5kbits/s dup=277 drop=2748 speed=0.98x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 3914 fps= 30 q=29.0 size=     305kB time=00:02:07.79 bitrate=  19.5kbits/s dup=277 drop=2760 speed=0.98x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3929 fps= 30 q=29.0 size=     306kB time=00:02:08.29 bitrate=  19.5kbits/s dup=277 drop=2771 speed=0.98x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 3945 fps= 30 q=29.0 size=     307kB time=00:02:08.83 bitrate=  19.5kbits/s dup=277 drop=2784 speed=0.98x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3960 fps= 30 q=29.0 size=     308kB time=00:02:09.33 bitrate=  19.5kbits/s dup=277 drop=2795 speed=0.98x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 3976 fps= 30 q=29.0 size=     309kB time=00:02:09.86 bitrate=  19.5kbits/s dup=277 drop=2807 speed=0.981x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 3991 fps= 30 q=29.0 size=     310kB time=00:02:10.36 bitrate=  19.5kbits/s dup=277 drop=2818 speed=0.981x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 4007 fps= 30 q=29.0 size=     311kB time=00:02:10.89 bitrate=  19.5kbits/s dup=277 drop=2830 speed=0.981x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 3 times
+frame= 4022 fps= 30 q=29.0 size=     312kB time=00:02:11.39 bitrate=  19.5kbits/s dup=277 drop=2841 speed=0.981x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 4 times
+frame= 4037 fps= 30 q=29.0 size=     313kB time=00:02:11.89 bitrate=  19.5kbits/s dup=277 drop=2851 speed=0.981x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 1 times
+frame= 4052 fps= 30 q=29.0 size=     314kB time=00:02:12.39 bitrate=  19.5kbits/s dup=277 drop=2864 speed=0.981x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 5 times
+frame= 4067 fps= 30 q=29.0 size=     315kB time=00:02:12.89 bitrate=  19.4kbits/s dup=277 drop=2874 speed=0.981x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+frame= 4083 fps= 30 q=29.0 size=     319kB time=00:02:13.43 bitrate=  19.6kbits/s dup=277 drop=2887 speed=0.981x    [dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 2 times
+av_interleaved_write_frame(): Invalid argument
+[dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+Error writing trailer of pipe:1: Invalid argument
+frame= 4091 fps= 30 q=29.0 Lsize=     320kB time=00:02:13.96 bitrate=  19.6kbits/s dup=277 drop=2892 speed=0.983x    
+video:320kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+[libx264 @ 000002b49aa6ab80] frame I:17    Avg QP:11.94  size:  2329
+[libx264 @ 000002b49aa6ab80] frame P:1031  Avg QP:10.11  size:    78
+[libx264 @ 000002b49aa6ab80] frame B:3043  Avg QP:13.67  size:    70
+[libx264 @ 000002b49aa6ab80] consecutive B-frames:  0.8%  0.0%  0.0% 99.1%
+[libx264 @ 000002b49aa6ab80] mb I  I16..4: 52.7% 46.5%  0.9%
+[libx264 @ 000002b49aa6ab80] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4:  0.0%  0.0%  0.0%  0.0%  0.0%    skip:100.0%
+[libx264 @ 000002b49aa6ab80] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.0%  0.0%  0.0%  direct: 0.0%  skip:100.0%  L0:26.8% L1:73.2% BI: 0.0%
+[libx264 @ 000002b49aa6ab80] 8x8 transform intra:46.3% inter:0.0%
+[libx264 @ 000002b49aa6ab80] coded y,uvDC,uvAC intra: 0.5% 0.0% 0.0% inter: 0.0% 0.0% 0.0%
+[libx264 @ 000002b49aa6ab80] i16 v,h,dc,p: 93%  4%  3%  0%
+[libx264 @ 000002b49aa6ab80] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 41% 27% 32%  0%  0%  0%  0%  0%  0%
+[libx264 @ 000002b49aa6ab80] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 43% 18% 22%  3%  3%  3%  3%  3%  2%
+[libx264 @ 000002b49aa6ab80] i8c dc,h,v,p: 100%  0%  0%  0%
+[libx264 @ 000002b49aa6ab80] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 000002b49aa6ab80] ref B L0:  1.7% 98.3%
+[libx264 @ 000002b49aa6ab80] kb/s:19.51
+[dshow @ 000002b49aa5ed80] real-time buffer [@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}] [video input] too full or near too full (102% of size: 3041280 [rtbufsize parameter])! frame dropped!
+    Last message repeated 5 times
+Exiting normally, received signal 2.
