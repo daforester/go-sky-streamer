@@ -38,7 +38,7 @@ func (C *Capture) Start() error {
 	C.Height = 1080
 	C.Width = 1920
 
-	cmd := exec.Command("ffmpeg", "-framerate", "30", "-f", C.InputFormat, "-video_size", fmt.Sprintf("%vx%v", C.Width, C.Height), "-i", C.DevicePath, "-c", "h264", "-f", "h264", "pipe:1")
+	cmd := exec.Command("ffmpeg", "-hwaccel", "dxva2", "-f", C.InputFormat, "-rtbufsize", "100M", "-i", C.DevicePath, "-f", "h264", "pipe:1")
 	fmt.Println(cmd.Args)
 
 	dataPipe, err := cmd.StdoutPipe()
@@ -53,6 +53,8 @@ func (C *Capture) Start() error {
 	C.Framebuffer = make(chan []byte, 60)
 
 	go func() {
+		frameBytes := make([]byte, 600000)
+
 		for {
 			select {
 			case <-C.Off:
@@ -61,10 +63,10 @@ func (C *Capture) Start() error {
 				}
 				return
 			default:
-				frameBytes := make([]byte, 600000)
 				n, err := dataPipe.Read(frameBytes)
 				if err != nil {
 					log.Println("could not read pipe. ", err)
+					log.Println(cmd.Args)
 				}
 
 				C.Framebuffer <- frameBytes[:n]

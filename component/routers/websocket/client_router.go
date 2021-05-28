@@ -5,6 +5,7 @@ import (
 	"github.com/daforester/go-sky-streamer/component/controllers/websocket/client"
 	"github.com/daforester/go-sky-streamer/component/routers"
 	"github.com/daforester/go-sky-streamer/component/services/sockets/engine"
+	"github.com/gorilla/websocket"
 )
 
 type ClientRouter struct {
@@ -35,5 +36,11 @@ func (P *ClientRouter) RegisterPeerRoutes(r engine.Interface) {
 	})
 	r.AddJSON("GET_STATUS", func(c *engine.Context) {
 		P.RunController(c, &client.GetICEController{})
+	})
+	r.AddCommand("PING", func(c *engine.Context) {
+		_ = c.Connection.WriteMessage(websocket.TextMessage, []byte(c.Data.(string)))
+	})
+	r.AddCommand("PONG", func(c *engine.Context) {
+
 	})
 }

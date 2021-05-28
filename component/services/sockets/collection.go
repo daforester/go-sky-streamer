@@ -120,8 +120,6 @@ func (C *Collection) AddConnection(connection *Connection) {
 	defer C.modifyLock.Unlock()
 	connection.SetCollection(C)
 	C.connections = append(C.connections, connection)
-	logrus.Debug("Added Connection")
-	logrus.Debug(connection.String())
 	lines := strings.Split(C.String(), "\n")
 	for _, l := range lines {
 		logrus.Debug(l)
@@ -135,8 +133,6 @@ func (C *Collection) RemoveConnection(connection *Connection) {
 		if c == connection {
 			connection.SetCollection(nil)
 			C.connections = append(C.connections[:n], C.connections[n+1:]...)
-			logrus.Debug("Removed Connection")
-			logrus.Debug(connection.String())
 			lines := strings.Split(C.String(), "\n")
 			for _, l := range lines {
 				logrus.Debug(l)

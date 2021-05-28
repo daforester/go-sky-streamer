@@ -4,7 +4,6 @@ import (
 	"errors"
 	"fmt"
 	"github.com/gorilla/websocket"
-	"github.com/sirupsen/logrus"
 	"net"
 	"strconv"
 	"sync"
@@ -103,7 +102,6 @@ func (C *Connection) ReadMessage() (messageType int, p []byte, err error) {
 }
 
 func (C *Connection) SetUUID(uuid string) {
-	logrus.Debug("Set Connection UUID to: " + uuid)
 	C.uuid = uuid
 }
 

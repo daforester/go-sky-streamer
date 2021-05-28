@@ -32,17 +32,34 @@ func (S Stream) New(capture *capture.Capture) *Stream {
 		panic(err)
 	}
 
+	localTrack, err := webrtc.NewTrackLocalStaticSample(
+		webrtc.RTPCodecCapability{MimeType: "video/h264"},
+		"video",
+		"pion",
+	)
+	if err != nil {
+		panic(err)
+	}
+
+	rtpSender, videoTrackErr := peerConnection.AddTrack(localTrack)
+	if videoTrackErr != nil {
+		panic(videoTrackErr)
+	}
+
+	// Read incoming RTCP packets
+	// Before these packets are returned they are processed by interceptors. For things
+	// like NACK this needs to be called.
+	go func() {
+		rtcpBuf := make([]byte, 1500)
+		for {
+			if _, _, rtcpErr := rtpSender.Read(rtcpBuf); rtcpErr != nil {
+				return
+			}
+		}
+	}()
+
 	peerConnection.OnConnectionStateChange(func(state webrtc.PeerConnectionState) {
 		if state == webrtc.PeerConnectionStateConnected {
-			localTrack, err := webrtc.NewTrackLocalStaticSample(
-				webrtc.RTPCodecCapability{MimeType: "video/h264"},
-				"video",
-				"pion",
-			)
-			if err != nil {
-				panic(err)
-			}
-
 			for {
 				select {
 				case <-capture.Off:
@@ -64,27 +81,6 @@ func (S Stream) New(capture *capture.Capture) *Stream {
 
 	peerConnection.OnTrack(func(remoteTrack *webrtc.TrackRemote, receiver *webrtc.RTPReceiver) {
 		fmt.Println("ON TRACK")
-		localTrack, err := webrtc.NewTrackLocalStaticSample(remoteTrack.Codec().RTPCodecCapability, "video", "pion")
-		if err != nil {
-			panic(err)
-		}
-
-		for {
-			select {
-			case <-capture.Off:
-				_ = S.Connection.Close()
-				return
-			case f := <-capture.Framebuffer:
-				sample := media.Sample{
-					Data:    f,
-				}
-
-				if err := localTrack.WriteSample(sample); err != nil {
-					log.Fatal("could not write rtp sample. ", err)
-					return
-				}
-			}
-		}
 	})
 
 	s.Connection = peerConnection

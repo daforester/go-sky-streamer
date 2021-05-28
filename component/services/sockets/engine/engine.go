@@ -117,22 +117,14 @@ func (E *Engine) ReadMessageWithEngine(connection *sockets.Connection, msg []byt
 }
 
 func (E *Engine) ParseData(input []byte) (HandlerMethod, sockets.Request) {
-	logrus.Debug("Parsing input")
-	logrus.Debug(string(input))
 	if input[0] == '{' {
 		// Assume JSON
-		logrus.Debug("Assuming JSON based on first byte")
 		r, err := E.parseJSONData(input)
-		logrus.Debug(err)
 		if err == nil {
-			logrus.Debug("Parsing JSON complete")
-			logrus.Debug(r)
 			return JSON_HANDLER, r
 		}
 	}
 	r := E.parseCommandData(string(input))
-	logrus.Debug("Parsing Command complete")
-	logrus.Debug(r)
 	return COMMAND_HANDLER, r
 }
 
